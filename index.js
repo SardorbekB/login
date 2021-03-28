@@ -5,7 +5,7 @@ const path = require('path');
 const registerRoute = require('./router/register');
 const loginRoute = require('./router/login');
 
-const db = 'mongodb://localhost/virtualdars1';
+const db = 'mongodb://localhost/login';
 mongoose.connect(db, {useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true})
     .then(() => {
         console.log('mongodbga ulanish amalga oshdi');

@@ -3,6 +3,7 @@ h1 {
     color: blue;
 }
 
+
 input, button {
     display: block;
     margin: 0 auto;
@@ -11,4 +12,12 @@ input, button {
 a {
     display: block;
     text-align: center;
+    margin-left: 10px;
+}
+a:hover {
+    color: red;
+}
+
+table {
+    margin: 0 auto;
 }
