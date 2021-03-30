@@ -23,7 +23,7 @@ router.post('/', async(req, res) => {
     if(!isPassword) {
         return res.status(400).send('email yoki parol xato');
     }
-    res.send(true);
+    res.redirect("news");
 });
 
 function validate(user) {

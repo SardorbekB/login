@@ -2,11 +2,13 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const path = require('path');
+
 const registerRoute = require('./router/register');
 const loginRoute = require('./router/login');
 
 const db = 'mongodb://localhost/login';
-mongoose.connect(db, {useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true})
+const options = {useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true};
+mongoose.connect(db, options)
     .then(() => {
         console.log('mongodbga ulanish amalga oshdi');
     })
@@ -24,6 +26,10 @@ mongoose.connect(db, {useFindAndModify: false, useNewUrlParser: true, useUnified
 
     app.get('/', async(req, res) => {
         res.render('index');
+    });
+
+    app.get('/news', async(req, res) => {
+        res.render('news');
     });
 
 const port = process.env.PORT || 5000;
