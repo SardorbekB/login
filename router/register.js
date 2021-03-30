@@ -31,10 +31,10 @@ router.post('/', async(req, res) => {
 
     await user.save()
         .then(() => {
-            res.send('succesfull...');
+            res.send('Ro`yhatdan o`tish muvaffaqqiyatli bo`ldi...');
         })
         .catch((err) => {
-            res.send('xato yuz erdi...');
+            res.send('Xato yuz berdi...');
         });
 });
 
